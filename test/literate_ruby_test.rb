@@ -5,8 +5,6 @@ Bundler.require(:default, :test)
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require 'prettyprint'
-
 require 'wrong/adapters/minitest'
 
 $:.unshift(File.join(File.dirname(__FILE__), "..", "lib"))

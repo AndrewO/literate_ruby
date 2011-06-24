@@ -2,4 +2,72 @@ h1. Literate Ruby
 
 This library is the first step towards a more literate Ruby syntax, similar to Haskell's (admittedly semi-literate syntax).
 
-Applications include: documentation files where there's more text than code (e.g. READMEs), blog entries, or a minimalist story runnner.
+Applications include: documentation files where there's more text than code (e.g. like READMEs!), blog entries, or a minimalist story runnner.
+
+h2. Usage
+
+h3. Single lines code
+
+<pre><code>
+> puts "This is inline code."
+> puts "But this will be part of the same code block."
+</code></pre>
+
+h3. Block code
+
+<pre><code>
+=begin_code
+def describe_block_code
+  puts "This will all be part of the same code block."
+end
+
+describe_block_code
+=end_code
+</code></pre>
+
+h3. Loading
+
+<pre><code>
+=begin_code
+require 'pp'
+require './lib/literate_ruby'
+
+lines = LiterateRuby.load("test/fixtures/fixture.lrb")
+
+pp lines
+
+pp "FOO: #{FOO}"
+pp "foo (method): #{foo()}"
+=end_code
+</code></pre>
+
+h3. Parsing
+
+If you just want access to the raw tree without eval'ing the code, do this:
+
+<pre><code>
+=begin_code
+require 'pp'
+require './lib/literate_ruby'
+
+lines = LiterateRuby.parse(File.new("test/fixtures/fixture.lrb"))
+
+pp lines
+
+=end_code
+</code></pre>
+
+h2. This file is like, so self-referential, or whatever
+
+Aim your shells thusly for great justice:
+
+<pre><code>
+$ ruby -r./lib/literate_ruby -e "LiterateRuby.load('README.textile')"
+</code></pre>
+
+(from this directory)
+
+h2. TODOS
+
+* Figure out if we need/how best to finish off the LiterateRuby.require method. So someone could write library code if they so desired.
+* Possibly change or make the inline & block delimiters configurable to support different markdown languages' code syntax.
