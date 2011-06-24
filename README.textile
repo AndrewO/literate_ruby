@@ -1,0 +1,5 @@
+h1. Literate Ruby
+
+This library is the first step towards a more literate Ruby syntax, similar to Haskell's (admittedly semi-literate syntax).
+
+Applications include: documentation files where there's more text than code (e.g. READMEs), blog entries, or a minimalist story runnner.
