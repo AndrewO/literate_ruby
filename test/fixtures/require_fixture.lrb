@@ -1,0 +1,10 @@
+BAZ is 678
+
+=begin_code
+BAZ = 
+  678
+=end_code
+
+> def bar
+>  45 + 35
+> end

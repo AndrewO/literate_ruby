@@ -2,14 +2,14 @@ FOO is declared to be 123
 Let's test multines
 
 And paragraph breaks
-> FOO == 123
+> FOO = 123
 > def foo
 >  1 + 1
 > end
 
 BAR is 456
 
-=begin
+=begin_code
 BAR = 
   456
-=end
+=end_code
