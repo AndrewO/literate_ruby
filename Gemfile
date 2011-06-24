@@ -4,6 +4,8 @@ source "http://rubygems.org"
 gemspec
 
 group :test do
+  gem 'pry_debug'
+  gem 'method_source'
   gem 'minitest'
   gem 'wrong'
   gem 'infinity_test'
