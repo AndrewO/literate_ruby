@@ -1,0 +1,11 @@
+infinity_test do
+  use :rubies => %w(ruby-1.9.2 ruby-1.8.7), :app_framework => :rubygems, :verbose => true
+  
+  notifications :growl do
+    show_images :mode => :fuuu
+  end
+  
+  before_run do
+    clear :terminal
+  end
+end
