@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "literate_ruby"
   s.version     = LiterateRuby::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["Andrew O'Brien"]
+  s.email       = ["obrien.andrew@gmail.com"]
+  s.homepage    = "http://github.com/AndrewO/literate_ruby"
+  s.summary     = %q{Don't comment your code. Code your comments.}
+  s.description = %q{Literate Ruby is a small preprocessor that allows embedding code within text files and then loading them as programs.}
 
   s.rubyforge_project = "literate_ruby"
 
